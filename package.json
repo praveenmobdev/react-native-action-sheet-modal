@@ -1,6 +1,6 @@
 {
   "name": "react-native-action-sheet-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cross platform action sheet design which supports on both Android and iOS.",
   "main": "index.js",
   "scripts": {

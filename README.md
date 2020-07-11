@@ -2,6 +2,10 @@
 
 Highly customizable Action sheet modal for react native.
 
+<p align="center">
+    <img src="./demo.gif" height="500" />
+</p>
+
 ## Setup
 
 This library is available on npm, install it with: `npm i react-native-action-sheet-modal`.
