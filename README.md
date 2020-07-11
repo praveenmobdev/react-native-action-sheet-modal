@@ -63,9 +63,25 @@ const App = () => {
     setVisible(false)
   }
 
+  function modalShow(){
+    console.log('modalShow')
+  }
+
   return (
     <>
-      <ActionSheet options={list} isVisible={visible} onClose={()=>onClose()} onChange={onChange}/>
+      <ActionSheet 
+        options={list} 
+        isVisible={visible} 
+        onClose={()=>onClose()} 
+        onChange={onChange}
+        hideCancel={false}
+        cancelText='close'
+        cancelTextStyle={{fontSize:15}}
+        cancelContainerStyle={{backgroundColor:'white'}}
+        optionsTextStyle={{fontSize:15}}
+        optionsContainerStyle={{backgroundColor:'white'}}
+        modalProps={{animationInTiming:500, onModalShow:()=>modalShow()}}
+      />
       <View style={styles.container}>
         <TouchableOpacity 
         onPress={()=>setVisible(true)}
@@ -78,12 +94,15 @@ const App = () => {
 
 
 
+
+
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   button:{ paddingHorizontal: 20, marginVertical:20, paddingVertical: 10, backgroundColor: "cyan", borderRadius: 10, },
 });
 
 export default App;
+
 ```
 
 ## Props
