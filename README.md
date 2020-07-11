@@ -88,11 +88,18 @@ export default App;
 
 ## Props
 
-|Name  |Type  |Required  | Description |
-|--|--|--|--|
-| isVisible | boolean | Yes | boolean value(true/false) to open/close the action sheet.|
-| onClose | function | Yes | function to call while clicking cancel button and the backdrop area|
-| options | array | Yes | list of options to display|
-| onChange | function | Yes | function to call while choosing an option|
+| Name | Type | Required |Description  | Default |
+|--|--|--|--|--|
+| isVisible | boolean | Yes | boolean value(true/false) to open/close the action sheet. | false |
+| onClose | function | Yes | function to call while clicking cancel button and the backdrop area | () => {} |
+| options | array | Yes | list of options to display | [] |
+| onChange | function | Yes | function to call while choosing an option | () => {} |
+| hideCancel | boolean | No | to hide the bottom cancel button | false |
+| cancelText | string | No | text to be display on the cancel button | "Cancel" |
+| cancelTextStyle | object | No | to update the style of the cancel button text | |
+| cancelContainerStyle | object | No | to update the style of the cancel button container | |
+| optionsTextStyle | object | No | to update the text style of the options | |
+| optionsContainerStyle | object | No | to update the options container style | |
+| modalProps | object | No | It accepts all the props of the react-native-modal package. For all props, Kindly refer the react-native-modal package. | |
 
 Pull requests, feedbacks and suggestions are welcome!
