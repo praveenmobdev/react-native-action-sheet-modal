@@ -23,7 +23,7 @@ import Actionsheet from 'react-native-action-sheet-modal';
 ```javascript
 function OptionsWindow() {
   return (
-    <ActionSheet options={list} isVisible={visible} modelClose={()=>onClose()} onChange={onChange}/>
+    <ActionSheet options={list} isVisible={visible} onClose={()=>onClose()} onChange={onChange}/>
   )
 }
 ```
@@ -65,7 +65,7 @@ const App = () => {
 
   return (
     <>
-      <ActionSheet options={list} isVisible={visible} modelClose={()=>onClose()} onChange={onChange}/>
+      <ActionSheet options={list} isVisible={visible} onClose={()=>onClose()} onChange={onChange}/>
       <View style={styles.container}>
         <TouchableOpacity 
         onPress={()=>setVisible(true)}
@@ -85,5 +85,14 @@ const styles = StyleSheet.create({
 
 export default App;
 ```
+
+## Props
+
+|Name  |Type  |Required  | Description |
+|--|--|--|--|
+| isVisible | boolean | Yes | boolean value(true/false) to open/close the action sheet.|
+| onClose | function | Yes | function to call while clicking cancel button and the backdrop area|
+| options | array | Yes | list of options to display|
+| onChange | function | Yes | function to call while choosing an option|
 
 Pull requests, feedbacks and suggestions are welcome!

@@ -10,15 +10,20 @@ import styles from './styles';
 
 function ActionSheet(props) {
 //   const insets = useSafeArea();
-  const { isVisible = false, modelClose = () => { }, options = [], onChange = () => { } } = props
+  const { 
+    isVisible = false, 
+    onClose = () => { }, 
+    options = [], 
+    onChange = () => { } 
+  } = props
 
   return (
       <Modal
         isVisible={isVisible}
         backdropOpacity={0.30}
         style={[styles.modelStyle, { padding: 10}]}
-        onBackButtonPress={modelClose}
-        onBackdropPress={modelClose}
+        onBackButtonPress={onClose}
+        onBackdropPress={onClose}
         backdropTransitionOutTiming={1}
         transparent={true}>
         {options.map((data, key) => {
@@ -44,7 +49,7 @@ function ActionSheet(props) {
         })}
         <View style={styles.pv5}></View>
         <View style={[styles.actionOptionsView]}>
-          <TouchableOpacity onPress={modelClose} style={[styles.alignCenter, styles.pv15]}>
+          <TouchableOpacity onPress={onClose} style={[styles.alignCenter, styles.pv15]}>
             <Text style={styles.actionOptionCancelText}>Cancel</Text>
           </TouchableOpacity>
         </View>
